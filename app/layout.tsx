@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { PropsWithChildren } from "react";
+import Providers from "./Providers";
+import MenuBar from "./MenuBar";
+import Footer from "./Footer";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -10,7 +12,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <Providers>
+                    <MenuBar />
+                    {children}
+                    <Footer />
+                </Providers>
+            </body>
         </html>
     );
 }
