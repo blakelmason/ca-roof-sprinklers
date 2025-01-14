@@ -1,13 +1,6 @@
-import {
-    AppBar,
-    Box,
-    Button,
-    MenuItem,
-    Toolbar,
-    Typography,
-} from "@mui/material";
+import { AppBar, Box, Button, MenuItem, Toolbar } from "@mui/material";
 
-const pages = ["Home", "Another Page"];
+const pages = ["HOME", "PAGE 2"];
 
 export default function MenuBar() {
     return (
@@ -15,9 +8,7 @@ export default function MenuBar() {
             <AppBar>
                 <Toolbar variant="dense">
                     {pages.map((page) => (
-                        <MenuItem key={page}>
-                            <Typography>{page}</Typography>
-                        </MenuItem>
+                        <MenuItem key={page}>{page}</MenuItem>
                     ))}
                     <Button
                         variant="contained"
